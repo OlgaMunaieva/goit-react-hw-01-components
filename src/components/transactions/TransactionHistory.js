@@ -33,7 +33,8 @@ TransactionHistory.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      type: PropTypes.string.isRequired,
+      type: PropTypes.oneOf(['invoice', 'payment', 'withdrawal', 'deposit'])
+        .isRequired,
       amount: PropTypes.string.isRequired,
       currency: PropTypes.string.isRequired,
     }).isRequired
