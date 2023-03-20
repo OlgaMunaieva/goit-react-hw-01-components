@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import { FriendListItem } from './FriendListItem';
+import { FriendListUl } from './Friends.styled';
 
 export const FriendList = ({ friends }) => {
   return (
-    <ul className="friend-list">
+    <FriendListUl>
       <FriendListItem friends={friends} />
-    </ul>
+    </FriendListUl>
   );
 };
 
