@@ -27,15 +27,10 @@ export const FriendListItemLi = styled.li`
 export const FriendIsOnline = styled.span`
   width: 20px;
   height: 20px;
-  background-color: green;
   border-radius: 50%;
-`;
-
-export const FriendIsNotOnline = styled.span`
-  width: 20px;
-  height: 20px;
-  background-color: red;
-  border-radius: 50%;
+  background-color: ${props => {
+    return props.isOnline ? 'green' : 'red';
+  }};
 `;
 
 export const FriendAvatar = styled.img`
